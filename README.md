@@ -90,11 +90,11 @@ This is exactly the same as the previous section, except we only choose 3 fields
 
 We generated the data for 1,000,000 readings in each of the situations above, and measured the size of the database.  These are the results.
 
-|             |  Tags | Fields | Rows Per Point | Total Rows | DB Size |
-|-------------|-------|--------|----------------|---------------------|
-| Series Based | 1 | 1 | 20 | 20,000,000 | 1,300 MB |
-| Column Based | 1 | 6 - 7 | 3 | 3,000,000 | 497 MB |
-| Column Based (Random) | 1 | 3 | 3 | 3,000,000 | 305 MB |
+|                       |  Tags | Fields | Rows Per Point | Total Rows | DB Size  |
+|-----------------------|-------|--------|----------------|------------|----------|
+| Series Based          | 1     | 1      | 20             | 20,000,000 | 1,300 MB |
+| Column Based          | 1     | 6 - 7  | 3              | 3,000,000  | 497 MB   |
+| Column Based (Random) | 1     | 3      | 3              | 3,000,000  | 305 MB   |
 
 As you can see there are large space benefits when using a column based layout.  Also, if you don't write a column every time you will save disk space - this would be useful for only recording a field when it's value changes.
 
